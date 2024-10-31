@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/clone.mp4" alt="Git Clone Here" />
+  <img src="./.github/clone.gif" alt="Git Clone Here" />
 
   &#xa0;
 </div>
