@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gitclonehere]
+@="Git Clone Here"
+"Icon"="\"C:\\Program Files\\Git\\git-bash.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gitclonehere\command]
+@="cmd.exe /c pushd \"%V\" &for /F \"usebackq delims=\" %%A in (`powershell -command \"Get-Clipboard\"`) do git clone %%A"
