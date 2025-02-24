@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; Parent key for the Git Utilities group
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Git.Utilities]
+@="Git Utilities"
+"MUIVerb"="Git Utilities"
+"SubCommands"="Git.Utilities.Clone;Git.Utilities.Pull"
+"Icon"="C:\\Program Files\\Git\\git-bash.exe,0"
+
+; Subcommand: Git Clone Here
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Git.Utilities.Clone]
+@="Git Clone Here"
+"Icon"="\"C:\\Program Files\\Git\\git-bash.exe\",0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Git.Utilities.Clone\command]
+@="cmd.exe /c pushd \"%V\" & for /F \"usebackq delims=\" %%A in (`powershell -command \"Get-Clipboard\"`) do git clone %%A"
+
+; Subcommand: Git Pull Here
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Git.Utilities.Pull]
+@="Git Pull Here"
+"Icon"="\"C:\\Program Files\\Git\\git-bash.exe\",0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Git.Utilities.Pull\command]
+@="cmd.exe /c pushd \"%V\" & git pull"
