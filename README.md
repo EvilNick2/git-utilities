@@ -1,9 +1,8 @@
 <div align="center" id="top"> 
-  <img src="./.github/clone.gif" alt="Git Clone Here" />
+  <img src="./.github/clone.gif" alt="Git Utilities" />
 
   &#xa0;
 </div>
-
 
 <h1 align="center">Git Utilities</h1>
 
@@ -28,7 +27,7 @@
 
 ## :dart: About ##
 
-**Git Utilities** is a set of Windows registry scripts that add two context menu options:
+**Git Utilities** is a set of Windows registry scripts that add a new submenu to the Windows Explorer context menu. This submenu houses two options:
 - **Git Clone Here:** Clones a Git repository from the clipboard directly into the current directory.
 - **Git Pull Here:** Performs a Git pull in the current directory.
 
@@ -36,10 +35,10 @@ These tools simplify Git operations directly from the Windows Explorer context m
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Adds "Git Clone Here" option to the Windows Explorer context menu  
-:heavy_check_mark: Adds "Git Pull Here" option to the Windows Explorer context menu  
+:heavy_check_mark: Adds a "Git Utilities" submenu to the Windows Explorer context menu  
+:heavy_check_mark: Houses "Git Clone Here" and "Git Pull Here" within this submenu  
 :heavy_check_mark: Automatically clones the repository URL from the clipboard  
-:heavy_check_mark: Executes Git pull for updating repositories  
+:heavy_check_mark: Executes Git pull to update repositories  
 :heavy_check_mark: Uses `cmd.exe` and `powershell` to perform operations  
 :heavy_check_mark: Customizable icons for the context menu options
 
@@ -58,14 +57,12 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) in
 
 ## :checkered_flag: Using ##
 
-1. For **Git Clone Here**:
-   - Open the [git-clone-here.reg](./git-clone-here.reg) file and double-click to add the entry to your registry.
-   - Copy the URL of the repository.
-   - Right-click in your desired folder and select "Git Clone Here".
-
-2. For **Git Pull Here**:
-   - Open the [git-pull-here.reg](./git-pull-here.reg) file and double-click to add the entry to your registry.
-   - Right-click in a Git repository folder and select "Git Pull Here" to update your repository.
+1. **Setup the Submenu:**
+   - Open the [`git-utilities.reg`](./git-utilities.reg) file and double-click to add the entries to your registry.
+   
+2. **Using the Options:**
+   - **Git Clone Here:** Copy the desired repository URL to your clipboard. Right-click in your desired folder background, select **Git Utilities**, and then click **Git Clone Here**.
+   - **Git Pull Here:** Right-click within an existing Git repository folder, select **Git Utilities**, and then click **Git Pull Here** to perform an update.
 
 ## :memo: License ##
 
